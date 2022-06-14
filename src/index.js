@@ -1,13 +1,13 @@
 import express from 'express'
-import { dirname } from "path";
+import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 
 const app = express()
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
-console.log(__dirname) // __dirname trae la direccion completa de donde se ubica el proyecto
+ // __dirname trae la direccion completa de donde se ubica el proyecto
 
-app.set('views',)
+app.set('views', join(__dirname, 'views'))// con el join se concadena automaticamente la direccion del path
 app.set('view engine', 'ejs')
 
 app.get('/', (req, res) => res.render('index'))
