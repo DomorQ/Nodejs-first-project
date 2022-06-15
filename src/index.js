@@ -12,7 +12,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 app.set('views', join(__dirname, 'views'))// con el join se concadena automaticamente la direccion del path
 app.set('view engine', 'ejs')
 
-app.use(indexRoutes)
+app.use(indexRoutes)// para poder concadenar las paginas que se crean en routes
+
+app.use(express.static(join(__dirname,'public')))// join lo uso esta vez para dirigirme a la carpeta de public con mi CSS
 
 
 app.listen(3000)

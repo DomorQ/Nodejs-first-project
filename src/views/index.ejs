@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= title %></title> <!-- para llamar a la variable utilizamos <%= %> para interpretar la sintaxis -->
+    <%- include('partials/head') %>
 </head>
 <body>
 
-    <%- include('partials/navigation.ejs') %> <!--El <%- %> con GUION sirve para interpretar codigo-->
+    <%- include('partials/navigation') %> <!--El <%- %> con GUION sirve para interpretar codigo-->
 
     <h1>Hello</h1>
 
-    <%- include('partials/footer.ejs') %>
+    <%- include('partials/footer') %>
 </body>
 </html>
