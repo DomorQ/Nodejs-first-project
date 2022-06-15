@@ -17,5 +17,5 @@ app.use(indexRoutes)// para poder concadenar las paginas que se crean en routes
 app.use(express.static(join(__dirname,'public')))// join lo uso esta vez para dirigirme a la carpeta de public con mi CSS
 
 
-app.listen(3000)
-console.log('Server in listening on port',3000)
+app.listen(process.env.PORT || 3000)
+console.log('Server in listening on port',process.env.PORT || 3000)
